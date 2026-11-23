@@ -11,12 +11,13 @@ import (
 	"vencordinstaller/buildinfo"
 )
 
-const ReleaseUrl = "https://api.github.com/repos/Vendicated/Vencord/releases/latest"
-const ReleaseUrlFallback = "https://vencord.dev/releases/vencord"
-const InstallerReleaseUrl = "https://api.github.com/repos/Vencord/Installer/releases/latest"
-const InstallerReleaseUrlFallback = "https://vencord.dev/releases/installer"
+// The vencord.dev fallbacks serve upstream builds, so the fork has no fallback
+const ReleaseUrl = "https://api.github.com/repos/CrusherD2/Vencord/releases/latest"
+const ReleaseUrlFallback = ReleaseUrl
+const InstallerReleaseUrl = "https://api.github.com/repos/CrusherD2/Installer/releases/latest"
+const InstallerReleaseUrlFallback = InstallerReleaseUrl
 
-var UserAgent = "VencordInstaller/" + buildinfo.InstallerGitHash + " (https://github.com/Vencord/Installer)"
+var UserAgent = "VencordInstaller/" + buildinfo.InstallerGitHash + " (https://github.com/CrusherD2/Installer)"
 
 var (
 	DiscordGreen        = color.RGBA{0, 133, 69, 0xff}

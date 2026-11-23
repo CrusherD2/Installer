@@ -511,8 +511,8 @@ func renderInstaller() g.Widget {
 			renderErrorCard(
 				DiscordYellow,
 				color.Black,
-				"**Github** and **vencord.dev** are the only official places to get Vencord. Any other site claiming to be us is malicious.\n"+
-					"If you downloaded from any other source, you should delete / uninstall everything immediately, run a malware scan and change your Discord password.",
+				"This installs **CrusherD2's Vencord fork** from github.com/CrusherD2/Vencord, not official Vencord.\n"+
+					"Only use this installer if you got it from CrusherD2 or github.com/CrusherD2/Installer.",
 				90,
 			),
 		),
