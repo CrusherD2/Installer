@@ -81,8 +81,11 @@ jobs:
       - name: Build
         shell: msys2 {0}
         run: |
+          # each make wipes build/, so keep the GUI exe aside while building the CLI
           make GUI=1 VERSION=${{ env.VERSION }}
+          mv build/VencordInstaller.exe ../VencordInstaller.exe
           make ARCH=386 VERSION=${{ env.VERSION }}
+          mv ../VencordInstaller.exe build/VencordInstaller.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
